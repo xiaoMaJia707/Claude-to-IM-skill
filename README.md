@@ -47,26 +47,33 @@ Claude Code → reads/writes your codebase
 
 ## Installation / 安装
 
-### Recommended / 推荐方式
+### One-line install / 一行安装
 
 ```bash
-npx skills add https://github.com/op7418/Claude-to-IM-skill.git --skill claude-to-im
+git clone https://github.com/op7418/Claude-to-IM-skill.git ~/.claude/skills/claude-to-im
 ```
 
-### Alternative: Manual clone / 手动克隆
+This clones the repo directly into your personal skills directory. Claude Code will discover it automatically in the next session.
+
+将仓库直接克隆到个人 Skills 目录，Claude Code 会在下次会话中自动发现。
+
+### Alternative: Symlink / 符号链接方式
+
+If you prefer to keep the repo elsewhere (e.g., for development):
+
+如果你想把仓库放在其他位置（比如方便开发）：
 
 ```bash
-# Clone the repo / 克隆仓库
-git clone https://github.com/op7418/Claude-to-IM-skill.git
-
-# Symlink into skills directory / 创建符号链接
+git clone https://github.com/op7418/Claude-to-IM-skill.git ~/code/Claude-to-IM-skill
 mkdir -p ~/.claude/skills
-ln -s "$(pwd)/Claude-to-IM-skill" ~/.claude/skills/claude-to-im
+ln -s ~/code/Claude-to-IM-skill ~/.claude/skills/claude-to-im
 ```
 
-After installation, restart Claude Code or start a new session for the skill to load.
+### Verify installation / 验证安装
 
-安装后重启 Claude Code 或开启新会话，Skill 即可加载。
+Start a new Claude Code session and type `/` — you should see `claude-to-im` in the skill list. Or ask Claude: "What skills are available?"
+
+启动新的 Claude Code 会话，输入 `/` 应能看到 `claude-to-im`。也可以问 Claude："What skills are available?"
 
 ## Quick Start / 快速开始
 
